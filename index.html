@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='Content-Security-Policy' content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
     <title>Grace Dev/Designer</title>
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
@@ -57,9 +56,7 @@
     <footer class="comp-footer row middle-xs"></footer>
     <!-- footer section component end -->
 
-    <!-- 
-        
-     -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
         Portfolio.load_component('header');
