@@ -10,8 +10,8 @@ const Portfolio = {
 
     host = Portfolio.url_base();
 
-    if( host  === "http://google.com" ){
-      route = "http://google.com";
+    if( host  === "https://graciela-cesareo.github.io/" ){
+      route = "https://graciela-cesareo.github.io/";
     }else{
       route = "http://localhost:5500";
     }

@@ -14,7 +14,7 @@ const projectsData = [
     text: "This project was about incorporate a new feature into the existing product, based on an area of functionality to be explored",
     image: "'img/whatsport.png'",
     index: "02",
-    link: "./projects/ramona.html",
+    link: "./projects/whatsapp.html",
     background: "#3C8D7F"
   },
   {
@@ -23,7 +23,7 @@ const projectsData = [
     text: "Cyberdash is a monitoring tool to detect potential cybersecurity risks in small companies",
     image: "img/cyberport.png",
     index: "03",
-    link: "./projects/ramona.html",
+    link: "./projects/cyberdash.html",
     background: "#04235f"
   },
   
