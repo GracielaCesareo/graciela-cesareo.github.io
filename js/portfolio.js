@@ -1,27 +1,5 @@
 const Portfolio = {
 
-    /*
-    Definicion de route para imagenes
-    * Solo para ambiente de desarrollo *
-  */
-  route_templates: function(){
-    var imagePath = 'http://sstatic.net/so/img/',
-        route, host;
-
-    host = Portfolio.url_base();
-
-    if( host  === "https://gracielacesareo.github.io/portfolio" ){
-      route = "https://gracielacesareo.github.io/portfolio";
-    }else{
-      route = "http://localhost:5500";
-    }
-
-    console.log(route)
-
-    return route;
-
-  },
-
   url_base: function(){
 
     var pathArray = location.href.split( '/' );
@@ -39,6 +17,31 @@ const Portfolio = {
     return url;
 
   },
+
+    /*
+    Definicion de route para imagenes
+    * Solo para ambiente de desarrollo *
+  */
+  route_templates: function(){
+    var imagePath = 'http://sstatic.net/so/img/',
+        route, host;
+
+    host = Portfolio.url_base();
+
+    if( host  === "https://gracielacesareo.github.io/portfolio" ){
+      route = "https://gracielacesareo.github.io/portfolio";
+    }else{
+      route = "http://localhost:5500";
+      
+    }
+
+    console.log(route)
+
+    return route;
+
+  },
+
+ 
 
   isEven: function(n) {
      return n % 2 == 0;
