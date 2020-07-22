@@ -28,8 +28,8 @@ const Portfolio = {
 
     host = Portfolio.url_base();
 
-    if( host  === "https://gracielacesareo.github.io/portfolio" ){
-      route = "https://gracielacesareo.github.io/portfolio";
+    if( host  === "https://gracielacesareo.github.io" ){
+      route = "https://gracielacesareo.github.io";
     }else{
       route = "http://localhost:5500";
       
