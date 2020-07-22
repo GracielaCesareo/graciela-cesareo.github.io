@@ -17,7 +17,6 @@ const Portfolio = {
     }
 
     console.log(route)
-    
 
     return route;
 
