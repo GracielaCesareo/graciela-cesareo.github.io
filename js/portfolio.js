@@ -16,6 +16,9 @@ const Portfolio = {
       route = "http://localhost:5500";
     }
 
+    console.log(route)
+    
+
     return route;
 
   },
