@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='Content-Security-Policy' content="default-src 'self' ; script-src 'self' 'unsafe-inline' *.disqus.com a.disquscdn.com requirejs.org www.google-analytics.com; style-src 'self' 'unsafe-inline' a.disquscdn.com; img-src 'self' *; media-src 'self' ; frame-src disqus.com;">
     <title>Grace Dev/Designer</title>
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
@@ -56,7 +57,9 @@
     <footer class="comp-footer row middle-xs"></footer>
     <!-- footer section component end -->
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 
+        
+     -->
     <script>
         AOS.init();
         Portfolio.load_component('header');
