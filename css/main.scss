@@ -71,6 +71,8 @@ p{
     &.upper{
         text-transform: uppercase;
         margin-bottom: $size-20;
+        margin-top: $size-20;
+        text-align: center;
     }
 }
 .subtitle{

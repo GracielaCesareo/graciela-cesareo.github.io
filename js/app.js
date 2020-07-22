@@ -18,3 +18,14 @@ const cardTemplate = (card) => {
 }
 
 document.getElementById('cards').innerHTML = `${projectsData.map(cardTemplate).join('')}`
+
+// Smooth scroll on link elements
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
