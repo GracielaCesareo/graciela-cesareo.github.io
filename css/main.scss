@@ -333,6 +333,9 @@ footer{
         }
         .cover-project__img{
             text-align: center;
+            img{
+                max-width: 100%;
+            }
         }
         .cover-project__details{
             padding: $size-20;

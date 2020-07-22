@@ -348,6 +348,10 @@ footer .social-media_icon.dribble:hover {
   text-align: center;
 }
 
+.case-study .cover-project .cover-project__img img {
+  max-width: 100%;
+}
+
 .case-study .cover-project .cover-project__details {
   padding: 1.25rem;
 }
