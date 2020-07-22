@@ -29,7 +29,15 @@ const Portfolio = {
     var host = pathArray[2];
     var url = protocol + '//' + host;
 
+    console.log('this is pathArray ' + pathArray)
+    console.log('this is protocol ' + protocol)
+    console.log('this is host ' + host)
+    console.log('this is url' + url)
+
+    console.log('this is my ' + url)
+
     return url;
+
   },
 
   isEven: function(n) {
