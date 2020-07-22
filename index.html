@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <script type="module" src="js/app.js"></script>
     <script src="js/portfolio.js"></script>
 </head>
@@ -34,8 +36,9 @@
     <footer class="comp-footer row middle-xs"></footer>
     <!-- footer section component end -->
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init();
         Portfolio.load_component('header');
         Portfolio.load_component('hero');
         Portfolio.load_component('projects');

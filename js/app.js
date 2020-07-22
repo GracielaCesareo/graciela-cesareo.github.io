@@ -4,7 +4,7 @@ import projectsData from './data.js';
 
 const cardTemplate = (card) => {
     return `
-            <div class="card col-xs-12 col-sm-6 row middle-xs box-row">
+            <div class="card col-xs-12 col-sm-6 row middle-xs box-row" data-aos="fade-up">
                 <div class="card__img img-container" style="background-color: ${card.background}; background-image: url(${card.image})"></div>
                 <div class="card__description">
                     <p class="card__index row end-xs">${card.index}</p>
@@ -20,8 +20,8 @@ const cardTemplate = (card) => {
 document.getElementById('cards').innerHTML = `${projectsData.map(cardTemplate).join('')}`
 
 // Smooth scroll on link elements
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
