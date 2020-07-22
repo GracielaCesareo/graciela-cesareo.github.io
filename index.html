@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace Dev/Designer</title>
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
+    <link rel="stylesheet" href="vendors/flexbox-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <script type="module" src="js/app.js"></script>
+    <script src="js/test.js"></script>
+</head>
+<body>
+
+    <!-- header component -->
+    <header class="comp-header"></header>
+    <!-- header component end-->
+
+
+    <!-- hero section component -->
+    <section class="comp-hero hero"></section>
+    <!-- hero section component end -->
+
+    <!-- work section component -->
+    <section id="projects" class="comp-projects work"></section>
+    <!-- work section component end-->
+
+
+    <!-- footer section component -->
+    <footer class="comp-footer row middle-xs"></footer>
+    <!-- footer section component end -->
+
+
+    <script>
+        Portfolio.load_component('header');
+        Portfolio.load_component('hero');
+        Portfolio.load_component('projects');
+        Portfolio.load_component('footer');
+    </script>
+
+</body>
+</html>

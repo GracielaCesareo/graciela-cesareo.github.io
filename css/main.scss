@@ -1,0 +1,431 @@
+// @import url("https://fonts.googleapis.com/css?family=Payton+One");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap");
+@import "includemedia";
+
+// Color vars
+$black: #000000;
+$white: #ffffff;
+$dark-gray: #4a4a4a;
+$midgray: #6a6a6a;
+$light-gray: #9a9a9a;
+$primary-color: #C32049;
+$secondary-color: #142340;
+$tertiary-color: #284680;
+$purple-dark:#6A4080;
+$purple-light: #AA66CC;
+/*** Space vars ***/
+$size-8: 0.5rem;
+$size-12: 0.75rem;
+$size-16: 1rem;
+$size-20: 1.25rem;
+$size-24: 1.5rem;
+$size-28: 1.75rem;
+$size-32: 2rem;
+$size-36: 2.25rem;
+$size-40: 2.5rem;
+
+/*** Font Weight vars ***/ 
+$lighter: 100;
+$light: 300;
+$normal: 400;
+$bold: 500;
+$bolder: 600;
+
+$breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px);
+
+/*** Document resets ***/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', serif;
+}
+
+html{
+    overflow: auto;
+    font-size: $size-16;
+}
+
+a{
+    text-decoration: none;
+}
+p{
+    font-weight: $normal;
+}
+/*** General styles by class ***/
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.container-small{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.img-container{
+    max-width: 100%;
+    // max-height: 100vh;
+}
+.title{
+    font-size: 3rem;
+    margin-bottom: $size-12;
+    font-weight: bolder;
+    &.upper{
+        text-transform: uppercase;
+        margin-bottom: $size-20;
+    }
+}
+.subtitle{
+    font-size: $size-24;
+}
+.text{
+    font-size: $size-16;
+    margin-bottom: $size-12;
+    line-height: 1.5;
+}
+.button{
+    color: inherit;
+    text-decoration: none;
+    margin: $size-12 0;
+    padding: $size-12 $size-20;
+    border: solid 2px $primary-color;
+    border-radius: $size-24;
+    &:hover{
+        color: $primary-color;
+        background-color: $primary-color;
+        font-weight: $bolder;
+    }
+}
+.box-row{
+    margin-bottom: $size-40;
+}
+
+/*** Document styles ***/
+
+// Header Component
+header{
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+
+    .logo{
+        img{
+            max-width: 50%;
+            margin-top: $size-12;
+        }
+    }
+
+    .navigation{
+        align-items: center;
+        .menu{
+            ul{
+                list-style: none;
+                .menu__item{
+                    display: inline-block;
+                    padding: 0.625rem 1.25rem;
+                }
+            }
+            .menu__item > a{
+                color: $white;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+// Hero component
+.hero{
+    background-image: linear-gradient(-90deg, $secondary-color, $tertiary-color);
+    overflow: hidden;
+    .hero__body{
+        height: 100vh;
+        .hero__description{
+            color: $white;
+            .title{
+                color: $white;
+            }
+            .subtitle{
+                color: $white;
+                margin-bottom: $size-12;
+            }
+            .text{
+                color: $white;
+                padding-bottom: $size-20;
+                max-width: 80%;
+            }
+            .button{
+                color: inherit;
+            }
+        }
+    }
+    .hero__img{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+.card{
+    box-shadow:7px 7px 20px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1.25rem;
+    max-width: 49%;
+    min-height: 560px;
+    @include media(">tablet"){
+        max-width: 100%;
+    }
+
+    .card__img{
+        text-align: center;
+        width: 100%;
+        height: 300px;
+        border-top-left-radius: 1.25rem;
+        border-top-right-radius: 1.25rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .card__description{
+        padding: $size-16;
+        .card__index{
+            font-size: $size-24;
+            font-weight: $bold;
+        }
+        .card__title{
+            font-size: $size-28;
+            margin-bottom: $size-12;
+            position: relative;
+            &::after{
+                display: block;
+                content: '';
+                width: 20%;
+                height: 3px;
+                background: $primary-color;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        .card__project{
+            font-size: $size-16;
+            color: $dark-gray;
+            margin-bottom: $size-12;
+        }
+        .card__text{
+            font-size: $size-16;
+            margin-bottom: $size-12;
+            padding-bottom: $size-16;
+        }
+        .card__button{
+            color: $dark-gray;
+            font-size: $size-16;
+            transition: all 0.5s;
+            &:hover{
+                color: $white;
+                font-weight: $bolder;
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $secondary-color;
+    min-height: 200px;
+    color: $white;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+    .social-media_icon{
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding: 2.5rem 0;
+        transition: all .5s linear;
+
+        &:hover{
+            margin-top: -0.5rem;
+        }
+
+        a{
+            display: block;
+            width: inherit;
+            height: inherit;
+        }
+
+        // Remove after update Dribble
+        &:last-child{
+            display: none;
+        }
+        // Remove after update Dribble
+
+        &.linkedin{
+            background-image: url('../img/linkedin.svg');
+            &:hover{
+                background-image: url('../img/linkedin_pink.svg');
+            }
+        }
+        &.github{
+            background-image: url('../img/github.svg');
+            &:hover{
+                background-image: url('../img/github_pink.svg');
+            }
+        }
+        &.behance{
+            background-image: url('../img/behance.svg');
+            &:hover{
+                background-image: url('../img/behance_pink.svg');
+            }
+        }
+        &.dribble{
+            background-image: url('../img/dribble.svg');
+            &:hover{
+                background-image: url('../img/dribble_pink.svg');
+            }
+        }
+        
+    }
+}
+
+/*** Case Study Styles ***/
+.case-study{
+    // height: 100vh;
+    background-image: linear-gradient($purple-dark, $purple-light, $white);
+    position: relative;
+
+    .case-study__project{
+        padding-top: 7.5rem;
+        text-align: center;
+        margin-bottom: 4rem;
+        color: $white;
+        .project-type{
+            font-size: $size-16;
+            line-height: 0.5;
+        }
+        .project-name{
+            font-size: 60px;
+            font-family: 'Paytone One', serif;
+            span{
+                display: block;
+                font-size: $size-20;
+                font-weight: $lighter;
+                line-height: 0;
+                letter-spacing: $size-8;
+            }
+        }
+    }
+
+    .cover-project{
+        // position: absolute;
+        bottom: 50px;
+        width: 100%;
+
+        .cover-project__container{
+            background-color: $white;
+            box-shadow:7px 7px 20px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 1.25rem;
+        }
+        .cover-project__img{
+            text-align: center;
+        }
+        .cover-project__details{
+            padding: $size-20;
+            p{
+                margin-bottom: $size-12;
+            }
+            .cover-project__description{
+                font-size: $size-20;
+            }
+            .cover-project__set{
+                p{
+                    span{
+                        display: block;
+                    }
+                }
+                .tools{
+                    list-style: none;
+
+                }
+            }
+        }
+        
+    }
+
+    
+
+}
+
+
+.case-study__text-block{
+    p{
+        line-height: 1.5;
+        margin-bottom: $size-12;
+    }
+}
+
+#test {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    color: $white;
+  }
+  #test span {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  #test span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: scrollDown 2s infinite;
+    animation: scrollDown 2s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes scrollDown {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes scrollDown {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
