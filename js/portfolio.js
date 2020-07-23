@@ -28,8 +28,8 @@ const Portfolio = {
 
     host = Portfolio.url_base();
 
-    if( host  === "https://gracielacesareo.github.io" ){
-      route = "https://gracielacesareo.github.io";
+    if( host  === "https://zealous-goodall-b6a4b2.netlify.app" ){
+      route = "https://zealous-goodall-b6a4b2.netlify.app";
     }else{
       route = "http://localhost:5500";
       
