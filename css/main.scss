@@ -44,7 +44,9 @@ html{
     overflow: auto;
     font-size: $size-16;
 }
-
+body{
+    scroll-behavior: smooth;
+}
 a{
     text-decoration: none;
 }
@@ -90,6 +92,7 @@ p{
     padding: $size-12 $size-20;
     border: solid 2px $primary-color;
     border-radius: $size-24;
+    background-color: $primary-color;
     display: inline-block;
 	padding: .75rem 1.25rem;
 	font-size: 1rem;
@@ -115,7 +118,7 @@ p{
 		left: 0;
 		width: 0%;
 		height: 100%;
-        background-color: $primary-color;
+        background-color: darken($primary-color, 10%);
 		transition: all .3s;
 		// border-radius: 10rem;
 		z-index: -1;
@@ -124,8 +127,7 @@ p{
         color: #fff;
 		&:before {
             width: 100%;
-            border: solid 2px $primary-color;
-		}
+        }
 	}
 
 }
@@ -177,14 +179,18 @@ header{
             color: $white;
             .title{
                 color: $white;
+                font-size: 4rem;
             }
             .subtitle{
                 color: $white;
+                font-size: 2.5rem;
                 margin-bottom: $size-12;
             }
             .text{
                 color: $white;
+                font-size: 1.5rem;
                 padding-bottom: $size-20;
+                margin: 0 auto;
                 max-width: 80%;
             }
             .button{
@@ -255,7 +261,7 @@ header{
             padding-bottom: $size-16;
         }
         .card__button{
-            color: $dark-gray;
+            color: $white;
             font-size: $size-16;
             transition: all 0.5s;
             &:hover{
@@ -469,4 +475,8 @@ footer{
     100% {
       opacity: 0;
     }
+  }
+
+  #heroBack{
+      height: 100vh;
   }

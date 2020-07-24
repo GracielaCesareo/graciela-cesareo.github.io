@@ -29,3 +29,24 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         });
     });
 });
+
+    VANTA.NET({
+        el: "#heroBack",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        backgroundColor: 0x142340,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        points: 10.00,
+        spacing: 14.00,
+        showDots: false
+    });
+    AOS.init();
+    
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('page loaded');
+    
+  });
+
