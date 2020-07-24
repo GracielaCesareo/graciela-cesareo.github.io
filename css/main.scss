@@ -11,8 +11,8 @@ $light-gray: #9a9a9a;
 $primary-color: #C32049;
 $secondary-color: #142340;
 $tertiary-color: #284680;
-$purple-dark:#6A4080;
-$purple-light: #AA66CC;
+$purple-dark:#442070;
+$purple-light: #714673;
 /*** Space vars ***/
 $size-8: 0.5rem;
 $size-12: 0.75rem;
@@ -144,14 +144,23 @@ header{
     z-index: 3;
 
     .logo{
+        @include media('<=560px'){
+            text-align: center;
+        }
         img{
             max-width: 50%;
             margin-top: $size-12;
+            @include media('<=560px'){
+                max-width: 30%;
+            }
         }
     }
 
     .navigation{
         align-items: center;
+        @include media('<=560px'){
+            flex-direction: column;
+        }
         .menu{
             ul{
                 list-style: none;
@@ -180,11 +189,18 @@ header{
             .title{
                 color: $white;
                 font-size: 4rem;
+                @include media('<=560px'){
+                    font-size: 2.5rem;
+                }
             }
             .subtitle{
                 color: $white;
                 font-size: 2.5rem;
                 margin-bottom: $size-12;
+                @include media('<=560px'){
+                    font-size: 1.5rem;
+                }
+                
             }
             .text{
                 color: $white;
@@ -192,18 +208,14 @@ header{
                 padding-bottom: $size-20;
                 margin: 0 auto;
                 max-width: 80%;
+                @include media('<=560px'){
+                    font-size: 1rem;
+                }
+                
             }
             .button{
                 color: inherit;
             }
-        }
-    }
-    .hero__img{
-        @include media("<tablet"){
-            display: none;
-        }
-        img{
-            width: 100%;
         }
     }
 }
@@ -264,10 +276,6 @@ header{
             color: $white;
             font-size: $size-16;
             transition: all 0.5s;
-            &:hover{
-                color: $white;
-                font-weight: $bolder;
-            }
         }
     }
 }
@@ -411,26 +419,45 @@ footer{
         line-height: 1.5;
         margin-bottom: $size-12;
     }
+.case-study__img-container{
+    max-width: 80%;
+    margin: auto;
+    padding: 3.5rem 0;
+
+    img{
+        width: 100%;
+    }
+    .case-study__foot-image{
+        display: block;
+        color: $midgray;
+        font-size: $size-16;
+        margin-top: $size-40;
+        text-align: center;
+    }
+}
 }
 
-#test {
+#scroll {
     position: absolute;
     bottom: 20px;
-    left: 50%;
+    left: 48%;
     color: $white;
+    @include media('<=tablet'){
+        display: none;
+    }
   }
-  #test span {
+  #scroll span {
     position: absolute;
     bottom: 30px;
     left: 50%;
     width: 30px;
     height: 50px;
     margin-left: -15px;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     border-radius: 50px;
     box-sizing: border-box;
   }
-  #test span::before {
+  #scroll span::before {
     position: absolute;
     top: 10px;
     left: 50%;
@@ -438,7 +465,7 @@ footer{
     width: 4px;
     height: 4px;
     margin-left: -2px;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 100%;
     -webkit-animation: scrollDown 2s infinite;
     animation: scrollDown 2s infinite;
