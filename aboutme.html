@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace Dev/Designer</title>
+    <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
+    <link rel="stylesheet" href="../vendors/flexbox-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="../css/main.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/animated-icons/icons/computer-display/computer-display.json">
+    <script src="../js/portfolio.js"></script>
+</head>
+<body>
+    <div class="about">
+        <!-- header component -->
+        <header class="comp-header row middle-xs"></header>
+        <!-- header component end-->
+        <div class="container-small row ">
+
+            <div class="col-md-4">
+                <div class="about__profile-image img-container">
+                    <img src="../img/avatar.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="about__description">
+                    <h1 class="title">Hi there, I'm Grace</h1>
+                    <div class="about__text-container">
+                        <p class="about__text">
+                            I've worked as a Front End developer for over two years building visual components for digital products. After working closely with design teams I decided to enroll me in a UX/UI Bootcamp to improve my design skills. And this is how I became a unicorn.
+                        </p>
+                        <p class="about__text">
+                            I have the skills needed to understand user problems, business goals, and technical viability.  Whether as a developer or as a designer I feel great creating, thinking, or building, I always make sure to deliver exceptional user experiences.
+                        </p>
+                        <p class="about__text">
+                            I’m currently looking for an opportunity to join a new team to work whit them,  share my knowledge, and build stunning digital products together.
+                        </p>
+                        <a href="" class="button">Email me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="about__skills col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="subtitle">Front End Dev</p>
+                        <img src="../img/computer-display.gif" alt="">
+                        <p>Web development focused on visual components for user interaction</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="subtitle">UX Design</p>
+                        <img src="../img/brain.gif" alt="">
+                        <p>Creation of experiences centered on the design thinking method</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="subtitle">UI Design</p>
+                        <img src="../img/design.gif" alt="">
+                        <p>User interface design based on usability principles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer section component -->
+        <footer class="comp-footer row middle-xs"></footer>
+        <!-- footer section component end -->
+    </div>
+
+    <script>
+        Portfolio.load_component('header');
+        Portfolio.load_component('footer');
+    </script>
+</body>
+</html>
