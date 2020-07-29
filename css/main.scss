@@ -58,7 +58,7 @@ p{
 /*** General styles by class ***/
 .container{
     max-width: 90%;
-    margin: 0 auto;
+    margin: 0 auto !important;
 }
 .container-small{
     max-width: 900px;
@@ -133,6 +133,10 @@ p{
 	}
 
 }
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
 .box-row{
     margin-bottom: $size-40;
 }
@@ -145,6 +149,13 @@ header{
     width: 100%;
     z-index: 3;
     margin: 0 !important;
+    transition: all linear 0.5s;
+
+    &.header--fixed{
+        height: 63px;
+        background-color: $secondary-color;
+        position: fixed;
+    }
 
     .logo{
         @include media('<=560px'){
@@ -267,6 +278,10 @@ header{
         max-width: 100%;
     }
 
+    &:hover{
+        box-shadow:7px 7px 20px 0px rgba(0, 0, 0, 0.5);
+    }
+
     .card__img{
         text-align: center;
         width: 100%;
@@ -320,6 +335,10 @@ footer{
     background-color: $secondary-color;
     min-height: 200px;
     color: $white;
+    .row{
+        margin: 0;
+    }
+    
     ul{
         display: flex;
         justify-content: space-between;
@@ -407,9 +426,8 @@ footer{
     }
 
     .cover-project{
-        // position: absolute;
-        bottom: 50px;
         width: 100%;
+        margin-bottom: $size-32;
 
         .cover-project__container{
             background-color: $white;
@@ -444,7 +462,6 @@ footer{
         }
     }
 }
-
 
 .case-study__text-block{
     p{
@@ -579,5 +596,29 @@ footer{
               margin: 2rem;
             }
         }
+      }
+  }
+
+  .progress-scroll__container{
+      width: 100%;
+      height: $size-8;
+      background-color: lighten($light-gray, 20%);
+      position: fixed;
+      margin-top: 63px;
+      z-index:10;
+      -webkit-box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow:    7px 7px 20px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.2);
+      transition: all linear 0.5s;
+      opacity: 0;
+
+      &.progress-scroll__container--visible{
+          opacity: 1;
+      }
+
+      .progress-scroll__bar{
+          height: $size-8;
+          background-color: lighten($tertiary-color, 20%) ;
+          width: 0%;
       }
   }

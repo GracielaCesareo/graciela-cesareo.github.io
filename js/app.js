@@ -44,9 +44,15 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         showDots: false
     });
     AOS.init();
-    
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('page loaded');
-    
-  });
+
+    const stickyHeader  = () => {
+        const header = document.getElementById("headerComponent");
+        const sticky = header.offsetTop;
+
+        window.pageYOffset > sticky ?  header.classList.add("header--fixed") : header.classList.remove("header--fixed");
+
+        return
+    }
+
+    window.addEventListener('scroll', stickyHeader)
 
