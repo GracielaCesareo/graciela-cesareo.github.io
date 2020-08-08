@@ -1,4 +1,5 @@
 import projectsData from './data.js';
+import headerProject from './casestudy.js'
 
 // Function card template
 
@@ -18,6 +19,12 @@ const cardTemplate = (card) => {
 }
 
 document.getElementById('cards').innerHTML = `${projectsData.map(cardTemplate).join('')}`
+
+
+
+
+
+// `${projectsData.map(casestudyTemplate).join('')}`
 
 // Smooth scroll on link elements
 document.querySelectorAll('a[href^="#"]').forEach(link => {

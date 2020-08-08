@@ -90,6 +90,7 @@ p{
 .button{
     color: inherit;
     text-decoration: none;
+    text-align: center;
     margin: $size-12 0;
     padding: $size-12 $size-20;
     border: solid 2px $primary-color;
@@ -173,6 +174,7 @@ header{
     .navigation{
         align-items: center;
         >.row{
+            min-height: 64px;
             @include media('<=560px'){
                 flex-direction: column;
             }
@@ -400,26 +402,53 @@ footer{
 /*** Case Study Styles ***/
 .case-study{
     // height: 100vh;
-    background-image: linear-gradient($purple-dark, $purple-light, $white);
     position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    }
+
+    &.whatsapp{
+        &::before{
+            background-image: url(../img/whatsback.png);
+        }
+    }
+
+    &.ramona{
+        &::before{
+            background-image: url(../img/ramonaback.png);
+        }
+    }
 
     .case-study__project{
+        position: relative;
         padding-top: 7.5rem;
         text-align: center;
         margin-bottom: 4rem;
         color: $white;
         .project-type{
-            font-size: $size-16;
+            font-size: $size-20;
             line-height: 0.5;
         }
         .project-name{
-            font-size: 60px;
-            font-family: 'Paytone One', serif;
+            font-size: 80px;
+            font-weight: 600;
+            // font-family: 'Paytone One', serif;
             span{
                 display: block;
-                font-size: $size-20;
+                font-size: $size-24;
                 font-weight: $lighter;
-                line-height: 0;
                 letter-spacing: $size-8;
             }
         }
@@ -427,12 +456,16 @@ footer{
 
     .cover-project{
         width: 100%;
-        margin-bottom: $size-32;
+        margin-bottom: 4.5rem;
+        position: relative;
+        top: $size-40;
+
 
         .cover-project__container{
             background-color: $white;
             box-shadow:7px 7px 20px 0px rgba(0, 0, 0, 0.2);
             border-radius: 1.25rem;
+            min-height: 500px;
         }
         .cover-project__img{
             text-align: center;
@@ -447,6 +480,7 @@ footer{
             }
             .cover-project__description{
                 font-size: $size-20;
+                margin-bottom: $size-40;
             }
             .cover-project__set{
                 p{
@@ -461,6 +495,8 @@ footer{
             }
         }
     }
+
+    
 }
 
 .case-study__text-block{
@@ -468,22 +504,30 @@ footer{
         line-height: 1.5;
         margin-bottom: $size-12;
     }
-.case-study__img-container{
-    max-width: 80%;
-    margin: auto;
-    padding: 3.5rem 0;
+    .case-study__img-container{
+        max-width: 80%;
+        margin: auto;
+        padding: 3.5rem 0;
 
-    img{
-        width: 100%;
+        img{
+            width: 100%;
+        }
+        .case-study__foot-image{
+            display: block;
+            color: $midgray;
+            font-size: $size-16;
+            margin-top: $size-40;
+            text-align: center;
+        }
     }
-    .case-study__foot-image{
-        display: block;
-        color: $midgray;
-        font-size: $size-16;
-        margin-top: $size-40;
-        text-align: center;
+
+    .navigation-projects{
+        padding-top: $size-28;
+        padding-bottom: $size-28;
+        .button{
+            color: $white;
+        }
     }
-}
 }
 
 #scroll {
@@ -622,3 +666,35 @@ footer{
           width: 0%;
       }
   }
+
+
+// Button Top Styles
+  .backtotop{
+
+    opacity: 0;
+    transition: opacity ease-in .5s;
+    &.--visible{
+        opacity: 1;
+    }
+
+    .backtotop__button{
+        position: fixed;
+        right: 24px;
+        bottom: 30px;
+        color: $white;
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        transform: rotate(-90deg);
+        background-image: url(../img/arrow-icon.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 59%;
+    }
+
+    span{
+        position: fixed;
+        right: 10px;
+        bottom: 15px;
+    }
+  }
+  
