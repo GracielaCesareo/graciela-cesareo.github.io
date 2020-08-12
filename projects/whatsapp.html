@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grace Dev/Designer</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
     <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
     <link rel="stylesheet" href="../vendors/flexbox-grid.min.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
     <link rel="stylesheet" href="../css/main.min.css">
     <script src="../js/portfolio.js"></script>
-
+    <script src="../js/components.js"></script>
 
     <style>
     </style>
@@ -22,6 +23,10 @@
     <!-- scroll indicator component -->
     <div class="comp-scrollindicator"></div>
     <!-- scroll indicator component end -->
+
+    <!-- bak to top button -->
+    <div class="comp-button-up backtotop"></div>
+    <!-- bak to top button end -->
 
     <!-- header case study component-->
     <section class="case-study-container">
@@ -78,7 +83,7 @@
                 
 
                 <div class="case-study__img-container img-container">
-                    <img src="../img/statistics.png" alt="">
+                    <img src="../img/statistics.png" alt="Statistics">
                     <span class="case-study__foot-image">Statistics</span>
                 </div>
             </div>
@@ -107,7 +112,7 @@
                 <p>My user is a woman who cares about organizing all of the content of her applications. Due to her work and life conditions, she needs to stay connected with family, friends, and especially with coworkers and that her main reason for use chat groups in WhatsApp. She is a really organized person that hates has to archive the unused chat groups on WhatsApp.</p>
 
                 <div class="case-study__img-container img-container">
-                    <img src="../img/userwhats.png" alt="">
+                    <img src="../img/userwhats.png" alt="User persona">
                     <span class="case-study__foot-image">User Persona</span>
                 </div>
 
@@ -137,7 +142,7 @@
                 <p>One day before the expiration date, you will receive a notification in case you need to backup files</p>
 
                 <div class="case-study__img-container img-container">
-                    <img src="../img/userflowwhats.png" alt="">
+                    <img src="../img/userflowwhats.png" alt="userflow">
                     <span class="case-study__foot-image">User Flow</span>
                 </div>
 
@@ -151,58 +156,48 @@
                 <p>In the design phase, I needed to be careful about the look and feel of the new feature. In order to keep the same style, I developed the style guide for WhatsApp</p>
 
                 <div class="case-study__img-container img-container">
-                    <img src="../img/styleguidewhats.png" alt="">
+                    <img src="../img/styleguidewhats.png" alt="Style guide">
                     <span class="case-study__foot-image">Style Guide</span>
                 </div>
 
+                <div class="case-study__img-container img-container">
+                    <img src="../img/hifiwhats.png" alt="Hi fi prototype">
+                    <span class="case-study__foot-image">Hi fi Prototype</span>
+                </div>
 
+                <div class="navigation-projects row between-xs">
+                    <a href="../projects/ramona.html" class="button col-xs-3">Previous project</a>
+                    <a href="../projects/whatsapp.html" class="button col-xs-3">Next Project</a>
+                </div>
 
             </div>
 
             
 
         </article>
+        
     </section>
     <!-- header case study component end-->
+
+
+    
+
+
+    <!-- footer component -->
+    <footer class="comp-footer"></footer>
+    <!-- footer component end -->
 
 
     <script>
         Portfolio.load_component('header');
         Portfolio.load_component('scrollindicator')
-        Portfolio.load_component('casestudy-header')
+        Portfolio.load_component('button-up')
         Portfolio.load_component('footer');
 
-        // Scroll indicator function
-
-        const progressCaseStudy = () => {
-
-        const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const heightContainer = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-        let scrolled = (windowScroll / heightContainer) * 100;
-
-        document.getElementById('scrollBar').style.width = scrolled + '%';
-
-        console.log(heightContainer);
-
-        const scrollBarContainer = document.getElementById('scrollBarContainer');
-
-        window.pageYOffset > 63 ? scrollBarContainer.classList.add('progress-scroll__container--visible') : scrollBarContainer.classList.remove('progress-scroll__container--visible')
-
-        stickyHeader();
-
-        }
-
-        const stickyHeader  = () => {
-        const header = document.getElementById("headerComponent");
-        const sticky = header.offsetTop;
-
-        window.pageYOffset > sticky ?  header.classList.add("header--fixed") : header.classList.remove("header--fixed");
-
-        return
-        }
-
-        window.addEventListener('scroll', progressCaseStudy)
+        window.addEventListener('scroll', Components.progressCaseStudy)
+        
+        const buttonToTop = document.querySelector('.backtotop');
+        buttonToTop.addEventListener('click', Components.scrollToTop)
     </script>
 
 </body>

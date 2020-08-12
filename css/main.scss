@@ -680,7 +680,7 @@ footer{
     .backtotop__button{
         position: fixed;
         right: 24px;
-        bottom: 30px;
+        bottom: 35px;
         color: $white;
         height: 3.5rem;
         width: 3.5rem;
@@ -688,13 +688,17 @@ footer{
         transform: rotate(-90deg);
         background-image: url(../img/arrow-icon.svg);
         background-repeat: no-repeat;
-        background-position: 50% 59%;
+        background-position: 50% 56%;
+        cursor: pointer;
+        background-color: $primary-color;
+        border: none;
     }
 
     span{
         position: fixed;
         right: 10px;
         bottom: 15px;
+        color: $primary-color;
     }
   }
   
