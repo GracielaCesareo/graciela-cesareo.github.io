@@ -26,6 +26,24 @@ const projectsData = [
   //   link: "./projects/cyberdash.html",
   //   background: "#04235f"
   // },
+  {
+    title: "Manageapp",
+    project: "Landing page product",
+    text: "Manageapp is a software created to plan day-to-day tasks for teams. Landing page challenged by Fontend Mentor.",
+    image: "img/manageport.png",
+    index: "03",
+    link: "./projects/manageapp.html",
+    background: "	#F25F3A"
+  },
+  {
+    title: "Personal budget manager",
+    project: "Application",
+    text: "This application is for helping you to manage your weekly finances. Done for learning and practicing React JS",
+    image: "img/pbmport.png",
+    index: "04",
+    link: "./projects/budget.html",
+    background: "	#004E92"
+  }
   
 ];
 

@@ -9,8 +9,8 @@ const cardTemplate = (card) => {
                 <div class="card__img img-container" style="background-color: ${card.background}; background-image: url(${card.image})"></div>
                 <div class="card__description">
                     <p class="card__index row end-xs">${card.index}</p>
-                    <p class="card__project">${card.project}</p>
                     <p class="card__title">${card.title}</p>
+                    <p class="card__project">${card.project}</p>
                     <p class="card__text">${card.text}</p>
                     <a href="${card.link}" class="card__button button">View case study</a>
                 </div>

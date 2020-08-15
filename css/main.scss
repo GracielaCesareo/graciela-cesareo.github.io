@@ -88,7 +88,7 @@ p{
     line-height: 1.5;
 }
 .button{
-    color: inherit;
+    color: white;
     text-decoration: none;
     text-align: center;
     margin: $size-12 0;
@@ -428,6 +428,11 @@ footer{
     &.ramona{
         &::before{
             background-image: url(../img/ramonaback.png);
+        }
+    }
+    &.manage{
+        &::before{
+            background-image: url(../img/manageback.png);
         }
     }
 
