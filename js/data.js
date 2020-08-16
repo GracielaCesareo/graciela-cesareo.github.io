@@ -43,8 +43,8 @@ const projectsData = [
     index: "04",
     link: "./projects/budget.html",
     background: "	#004E92"
-  }
-  
+  },
+
 ];
 
 export default projectsData;

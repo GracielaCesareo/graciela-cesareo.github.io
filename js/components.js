@@ -76,14 +76,6 @@ const Components = {
         ? buttonToTop.classList.add('--visible')
         : buttonToTop.classList.remove('--visible')
 
-        if(scrollDocument > totalHeightScrollable ){
-            button.style.bottom = '240px'
-        }else{
-            button.style.bottom = '20px'
-        }
-
-        console.log('esta es la altura scrolled' +scrollDocument)
-        console.log('esta es la altura del documento' + realHeightScroll)
         return
     },
 
