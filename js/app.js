@@ -4,7 +4,7 @@ import projectsData from './data.js';
 
 const cardTemplate = (card) => {
     return `
-            <div class="card col-xs-12 col-sm-6 row middle-xs box-row wow animated animate__fadeInUp" data-wow-duration="1s">
+            <div class="card col-xs-12 col-sm-6 row middle-xs box-row wow animated animate__fadeInUp" data-wow-duration="0.5s">
                 <div class="card__img img-container" style="background-color: ${card.background}; background-image: url(${card.image})"></div>
                 <div class="card__description">
                     <p class="card__title">${card.title}</p>
@@ -42,6 +42,7 @@ window.addEventListener('scroll', stickyHeader)
 window.addEventListener('scroll', new WOW().init())
 
 new WOW().init();
+
 VANTA.NET({
     el: "#heroBack",
     mouseControls: true,
