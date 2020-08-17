@@ -22,7 +22,6 @@ document.getElementById('cards').innerHTML = `${projectsData.map(cardTemplate).j
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
-        
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
         });

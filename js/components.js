@@ -1,21 +1,16 @@
 const Components = {
 
-    // test: () => {
-    //     console.log('esta es una función de prueba')
-    // }
-
     loadPage: () => {
         document.addEventListener('DOMContentLoaded', function() {
-        const button = document.querySelector('.backtotop__button');
-        let totalComponentsHeight;
-        let realHeightScroll;
+            const button = document.querySelector('.backtotop__button');
+            let totalComponentsHeight;
+            let realHeightScroll;
 
 
             buttonTopBehaviour();
-            stickyButton();
             return console.log('the scroll height is ' + document.body.clientHeight)
 
-              });
+        });
     },
 
     /* Components height  to show button go to the top */
@@ -32,18 +27,21 @@ const Components = {
         return totalComponentsHeight
     },
 
-    // stickyButton: () => {
-    //     const footerHeight  = document.querySelector('.comp-footer').offsetHeight
-    //     let bodyScroll      = window.outerHeight
-    //     let windowScrollTop = document.body.scrollTop || document.documentElement.scrollTop
+    stickyButton: () => {
 
-    //     totalHeightScrollable = bodyScroll  - footerHeight;
-    //     realHeightScroll      = totalHeightScrollable - windowScrollTop
+        const footerHeight  = document.querySelector('.comp-footer').offsetHeight
+        let bodyScroll      = window.outerHeight
+        let windowScrollTop = document.body.scrollTop || document.documentElement.scrollTop
 
-    //     return totalHeightScrollable
-    // },
+        totalHeightScrollable = bodyScroll  - footerHeight;
+        realHeightScroll      = totalHeightScrollable - windowScrollTop
 
+        return totalHeightScrollable
+    },
+
+    /* Component progress in case study*/ 
     progressCaseStudy: () => {
+
         const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const heightContainer = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
@@ -59,7 +57,7 @@ const Components = {
 
     },
 
-    /* Header sticky triggered by scroll*/
+    /* Header sticky triggered by scroll */
     stickyHeader: () => {
         Components.buttonTopBehaviour ();
 

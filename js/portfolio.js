@@ -22,8 +22,8 @@ const Portfolio = {
 
     host = Portfolio.url_base();
 
-    if( host  === "https://gracielac.netlify.app" ){
-      route = "https://gracielac.netlify.app";
+    if( host  === "https://thisisgrace.page" ){
+      route = "https://thisisgrace.page";
     }else{
       route = "http://localhost:5500";
       
